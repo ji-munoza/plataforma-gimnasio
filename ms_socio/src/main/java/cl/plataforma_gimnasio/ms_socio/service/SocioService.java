@@ -2,6 +2,7 @@ package cl.plataforma_gimnasio.ms_socio.service;
 
 import cl.plataforma_gimnasio.ms_socio.model.Socio;
 import cl.plataforma_gimnasio.ms_socio.repository.SocioRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class SocioService {
     private final SocioRepository socioRepository;
